@@ -22,7 +22,7 @@ d=5
 d=d+1
 
 gpu.setForeground(0xCC0000)
-gpu.set((xresolution/2=("[Admin]"))/2),d,"[Admin]")
+gpu.set((xresolution/2 (string.len("[Admin]"))/2),d,"[Admin]")
 d=d+1
 
 for j = 1, #admin do
@@ -31,3 +31,39 @@ d=d+1
 name=admin[j]
 prov=debug(name)
 if prov ^= nil then gpu.setForeground(0x00FF00) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status1) else gpu.setForeground(0xFF0000) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status2) end
+computer.removeUser(name)
+end
+
+d=d+2
+gpu.setForeground(0xCD2990)
+gpu.set((xresolution/2 (string.len("[Moderation]"))/2),d,"[Moderation]")
+d=d+1
+
+for i = 1, #modn do
+d=d+1
+name=modn[j]
+prov=debug(name)
+if prov ^= nil then gpu.setForeground(0x00FF00) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status1) else gpu.setForeground(0xFF0000) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status2) end
+computer.removeUser(name)
+end
+
+d=d+2
+gpu.setForeground(0xFFCC66)
+gpu.set((xresolution/2 (string.len("[untermensch]"))/2),d,"[untermensch]")
+d=d+1
+
+for i = 1, #donmod do
+d=d+1
+name=donmod[j]
+prov=debug(name)
+if prov ^= nil then gpu.setForeground(0x00FF00) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status1) else gpu.setForeground(0xFF0000) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status2) end
+computer.removeUser(name)
+end
+
+------------AutoReboot--------------
+
+os.sleep(1.5)
+if computer.uptime() >=300 then
+  computer.shutdown(true)
+  end
+end
