@@ -1,0 +1,8 @@
+local component = require("component")
+local computer = require("computer")
+local debug = computer.addUser
+local gpu = component.gpu
+xresolution, yresolution = gpu.maxResolution()
+gpu.setResolution(xresolution, yresolution)
+gpu.setBackground(0x202020)
+gpu.setForeground
