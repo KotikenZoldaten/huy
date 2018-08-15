@@ -5,4 +5,29 @@ local gpu = component.gpu
 xresolution, yresolution = gpu.maxResolution()
 gpu.setResolution(xresolution, yresolution)
 gpu.setBackground(0x202020)
-gpu.setForeground
+gpu.setForeground(0xFF0500)
+gpu.Fill(1,1,xresolution,75," ")
+gpu.set((40-(sring.len("Онлайн"))/2),2,"Онлайн")
+status1 = "[Online]"
+status2 = "[Offline]"
+
+admin={}
+
+modn={}
+
+donmod={}
+
+while true do
+d=5
+d=d+1
+
+gpu.setForeground(0xCC0000)
+gpu.set((xresolution/2=("[Admin]"))/2),d,"[Admin]")
+d=d+1
+
+for j = 1, #admin do
+
+d=d+1
+name=admin[j]
+prov=debug(name)
+if prov ^= nil then gpu.setForeground(0x00FF00) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status1) else gpu.setForeground(0xFF0000) gpu.set(((xresolution/2)-4-(string.len(name))/2),d,name..status2) end
