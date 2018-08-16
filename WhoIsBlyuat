@@ -7,7 +7,7 @@ gpu.setResolution(xresolution,yresolution)
 gpu.setBackground(0x202020)
 gpu.setForeground(0xFF0500)
 gpu.fill(1,1,xresolution,75," ")
-gpu.set((40-(sring.len("Онлайн Модерации"))/2),2,"Онлайн Модерации")
+gpu.set((40-(string.len("Онлайн Модерации"))/2),2,"Онлайн Модерации")
 status1 = "[Online]"
 status2 = "[Offline]"
 
